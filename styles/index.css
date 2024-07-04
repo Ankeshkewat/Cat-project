@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+#container{
+    width: 99%;
+    margin: auto;
+    font-family: cursive;
+    margin-top: 50px;
+}
+
+#container div{
+    width: 24.98%;
+    float: left;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 15px;
+
+}
+#container img{
+    width: 100%;
+}
+.origin, .life_span{
+    font-size: 25px;
+}

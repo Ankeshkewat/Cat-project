@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: aliceblue;
+    width: 99%;
+    margin: auto;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    /* border: 3px dashed red; */
+    justify-content: space-around;
+    padding: 25px;
+}
+nav li{
+    font-size: 25px;
+}
+nav a{
+    text-decoration: none;
+}
