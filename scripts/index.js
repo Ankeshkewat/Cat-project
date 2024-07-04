@@ -39,7 +39,34 @@ async function GetData() {
             let habbits_div = document.createElement('div');
             habbits_div.className = 'habbits_div';
 
-            card.append(img,name,desc,origin,life_span);
+            el.temperament.split(',').forEach((item,index)=>{
+            let temperament = document.createElement('p');
+            // temperament.innerText = item.trim();
+            let temperamentTextNode = document.createTextNode(item.trim());
+            temperament.appendChild(temperamentTextNode);
+
+            habbits_div.appendChild(temperament);
+            })
+ 
+            let wiki_div = document.createElement('div');
+            wiki_div.className = "wiki_div";
+
+            let wiki_link = document.createElement('p');
+            let link = document.createElement('a');
+
+            link.innerText = "Wikipedia";
+            link.setAttribute("href",el.wikipedia_url);
+            link.setAttribute("target","_blank");
+            wiki_link.className = "wiki_link";
+            wiki_link.innerText = "Read More : ";
+
+            wiki_div.append(wiki_link,link)
+
+            let view_images = document.createElement("p");
+            view_images.className = "view_images";
+            view_images.innerText = "View Images";
+
+            card.append(img,name,desc,origin,life_span,habbits_div,wiki_div,view_images);
             container_div.append(card)
         })
     }
