@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+#container{
+    width: 99%;
+    margin: auto;
+    font-family: cursive;
+    margin-top: 70px;
+}
+
+#card{
+    float: left;
+    width: 33%;
+    padding: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 80vh;
+    border-radius: 10px;
+    margin: 2px;
+    overflow: auto;
+
+}
+
+#container img{
+    width: 100%;
+}
+
+#card p{
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    background-color: rgb(137, 55, 213);
+    border-radius: 5px;
+    margin: auto;
+    color: white;
+}
+#card p:hover{
+    background-color: rgb(120, 24, 210);
+}
+
+@media only screen and (max-width:1230px){
+    #card{
+        width: 49.5%;
+    }
+}
+@media only screen and (max-width:810px){
+    #card{
+        width: 99%;
+        height: 100%;
+    }
+}

@@ -71,6 +71,12 @@ async function GetData() {
             view_images.className = "view_images";
             view_images.innerText = "View Images";
 
+            /* adding a evenListerner when clicking on view images */
+            view_images.addEventListener("click",()=>{
+              localStorage.setItem("breed_id",el.id);
+              location.href = "cat.html"
+            })
+
             card.append(img_div,name,desc,origin,life_span,habbits_div,wiki_div,view_images);
             container_div.append(card)
         })
