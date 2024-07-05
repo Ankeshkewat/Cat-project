@@ -3,12 +3,13 @@
     padding: 0;
 }
 nav{
-    background-color: aliceblue;
-    width: 99%;
+    background-color: rgb(201, 199, 133);
+    width: 101%;
     margin: auto;
     position: fixed;
     overflow: hidden;
     top: 0;
+    right: 0;
 }
 nav ul{
     list-style: none;

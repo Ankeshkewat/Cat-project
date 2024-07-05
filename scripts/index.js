@@ -9,18 +9,23 @@ async function GetData() {
             method: "GET"
         });
         const data = await jresp.json();
-        // console.log({ data });
+        console.log({ data });
 
         data.forEach((el, i, data) => {
-            console.log(el)
+            // console.log(el)
             let card = document.createElement('div');
             card.id ="card";
 
+            let img_div = document.createElement('div');
+            img_div.className = "img_div";
             let img = document.createElement('img');
             if (el.image?.url) {
                 img.setAttribute('src', el.image["url"]);
+                img.setAttribute('loading',"lazy");
             }
             
+            img_div.appendChild(img);
+
             let name = document.createElement('h1');
             let nameTextNode = document.createTextNode(el.name);
             name.appendChild(nameTextNode);
@@ -66,7 +71,7 @@ async function GetData() {
             view_images.className = "view_images";
             view_images.innerText = "View Images";
 
-            card.append(img,name,desc,origin,life_span,habbits_div,wiki_div,view_images);
+            card.append(img_div,name,desc,origin,life_span,habbits_div,wiki_div,view_images);
             container_div.append(card)
         })
     }
